@@ -12,19 +12,24 @@
         "destination": "/index.html"
       }
     ],
-    "headers": [{
+    "headers": [
+      {
         "source": "**/*.@(png|webmanifest|woff|woff2)",
-        "headers": [{
-          "key": "Cache-Control",
-          "value": "max-age=60"
-        }]
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=60"
+          }
+        ]
       },
       {
         "source": "**/*.@(js)",
-        "headers": [{
-          "key": "Cache-Control",
-          "value": "max-age=0"
-        }]
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=0"
+          }
+        ]
       }
     ]
   }
