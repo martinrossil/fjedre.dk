@@ -1,4 +1,4 @@
-import { AnchorLayout, AnchorLayoutData, ApplicationElement, Color, ILabelElement, LabelElement, TopBar } from 'enta';
+import { AnchorLayout, AnchorLayoutData, ApplicationElement, Color, ILabelElement, LabelElement, LeftNavigationList, TopBar, UniqueSellingPoints } from 'enta';
 
 export default class FjedreApp extends ApplicationElement {
     public constructor() {
@@ -7,9 +7,9 @@ export default class FjedreApp extends ApplicationElement {
         this.backgroundColor = new Color(210, 40, 96); // blue gray 100
         this.layout = new AnchorLayout();
         window.addEventListener('load', () => {
-            console.log('page loaded');
             this.addElement(new TopBar());
-            this.addElement(this.versionLabel);
+            this.addElement(new LeftNavigationList());
+            this.addElement(new UniqueSellingPoints());
         });
     }
 
