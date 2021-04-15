@@ -7,7 +7,7 @@
     "dev": "rollup -c rollup.development.js --watch",
     "lint": "eslint src/**/*",
     "build": "rollup -c rollup.production.js",
-    "public": "live-server --open=./public"
+    "public": "live-server --open=./public --entry-file=./public/index.html"
   },
   "repository": {
     "type": "git",
