@@ -31,7 +31,7 @@ export default {
                         transform: (contents) => contents.toString().replace('{{version}}', version).replace('{{version}}', version)
                     },
                     {
-                        src: 'assets/produkter/**.*', dest: 'public/produkter'
+                        src: 'assets/small/**.*', dest: 'public/produkter'
                     }
                 ]
             }),
