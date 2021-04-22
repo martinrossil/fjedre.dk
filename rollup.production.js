@@ -23,8 +23,8 @@ export default {
             resolve(),
             copy({
                 targets: [
-                    { src: 'assets/fonts/**.*', dest: 'public' },
-                    { src: 'assets/production/icons/**.*', dest: 'public' },
+                    { src: 'assets/fonts/**.*', dest: 'public/fonts' },
+                    { src: 'assets/production/icons/**.*', dest: 'public/icons' },
                     {
                         src: 'assets/production/**.*',
                         dest: 'public',
