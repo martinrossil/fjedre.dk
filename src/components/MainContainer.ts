@@ -21,7 +21,11 @@ export default class MainContainer extends DisplayContainer {
             if (this.containsElement(this.leftNavigation)) {
                 this.removeElement(this.leftNavigation);
             }
-            this.products.left = 24;
+            if (this.measuredWidth < 560) {
+                this.products.left = 16;
+            } else {
+                this.products.left = 24;
+            }
         } else {
             if (!this.containsElement(this.leftNavigation)) {
                 this.addElement(this.leftNavigation);
@@ -32,7 +36,11 @@ export default class MainContainer extends DisplayContainer {
             if (this.containsElement(this.uniqueSellingPoints)) {
                 this.removeElement(this.uniqueSellingPoints);
             }
-            this.products.right = 24;
+            if (this.measuredWidth < 560) {
+                this.products.right = 16;
+            } else {
+                this.products.right = 24;
+            }
         } else {
             if (!this.containsElement(this.uniqueSellingPoints)) {
                 this.addElement(this.uniqueSellingPoints);
