@@ -22,7 +22,6 @@ export default class FjedreApp extends ApplicationElement {
 
     protected validate(): void {
         super.validate();
-        console.log(this.measuredWidth);
         if (this.measuredWidth < 1280) {
             if (!this.containsElement(this.bottomNavigation)) {
                 this.addElement(this.bottomNavigation);
@@ -116,5 +115,3 @@ export default class FjedreApp extends ApplicationElement {
     private boxFilterTwo: BoxShadowFilter = new BoxShadowFilter(0, 2, 2, NaN, new Color(0, 0, 0, 0.06));
 }
 customElements.define('fjedre-app', FjedreApp);
-
-// // "value": "cache-control: public,max-age=31536000,immutable"
