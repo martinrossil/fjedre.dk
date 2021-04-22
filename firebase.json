@@ -17,6 +17,10 @@
         "source": "**",
         "headers": [
           {
+            "key": "Content-Security-Policy",
+            "value": "connect-src 'self'; default-src 'self'; font-src 'self'; img-src 'self' data:; manifest-src 'self'; object-src 'none'; script-src 'self'; upgrade-insecure-requests;"
+          },
+          {
             "key": "Referrer-Policy",
             "value": "no-referrer"
           },
