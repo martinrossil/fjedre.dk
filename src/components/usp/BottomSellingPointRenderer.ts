@@ -20,7 +20,7 @@ export default class BottomSellingPointRenderer extends DisplayContainer impleme
             this._iconBlock = new DisplayContainer();
             this._iconBlock.padding = 8;
             this._iconBlock.cornerSize = 6;
-            this._iconBlock.backgroundColor = Design.theme.colors.primary.dark;
+            this._iconBlock.backgroundColor = Design.theme.colors.neutral.dark;
             this._iconBlock.size(40, 40);
             this._iconBlock.addElement(this.pathElement);
         }
@@ -47,7 +47,7 @@ export default class BottomSellingPointRenderer extends DisplayContainer impleme
             this._textElement.typeFace = Design.theme.typography.primaryTypeFace;
             this._textElement.fontSize = 14;
             this._textElement.fontWeight = 600;
-            this._textElement.textColor = Design.theme.colors.primary.dark;
+            this._textElement.textColor = Design.theme.colors.neutral.normal;
         }
         return this._textElement;
     }

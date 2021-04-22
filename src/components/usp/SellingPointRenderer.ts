@@ -20,7 +20,7 @@ export default class SellingPointRenderer extends DisplayContainer implements IS
             this._iconBlock = new DisplayContainer();
             this._iconBlock.padding = 8;
             this._iconBlock.cornerSize = 6;
-            this._iconBlock.backgroundColor = Design.theme.colors.primary.dark;
+            this._iconBlock.backgroundColor = Design.theme.colors.neutral.normal;
             this._iconBlock.size(40, 40);
             this._iconBlock.addElement(this.pathElement);
         }
@@ -47,7 +47,7 @@ export default class SellingPointRenderer extends DisplayContainer implements IS
             this._labelElement.typeFace = Design.theme.typography.primaryTypeFace;
             this._labelElement.fontSize = 14;
             this._labelElement.fontWeight = 600;
-            this._labelElement.textColor = Design.theme.colors.primary.dark;
+            this._labelElement.textColor = Design.theme.colors.neutral.normal;
             this._labelElement.top = 12;
             this._labelElement.right = 16;
             this._labelElement.left = 56;
