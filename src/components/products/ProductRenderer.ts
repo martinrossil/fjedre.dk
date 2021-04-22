@@ -47,6 +47,7 @@ export default class ProductRenderer extends DisplayContainer implements IProduc
     public set product(value: IProduct | null) {
         if (value) {
             this.image.source = value.href + '.png';
+            this.image.alt = value.title;
             this.textElement.text = value.title;
         }
     }
