@@ -1,4 +1,5 @@
 import { HorizontalLayout, ILabelElement, IPathElement, ItemRenderer, LabelElement, PathElement } from 'enta';
+import { Cursor } from 'enta/dist/enums/Cursor';
 import Design from '../../design/Design';
 import INavigationItem from '../../interfaces/vo/INavigationItem';
 
@@ -6,6 +7,7 @@ export default class NavigationItemRenderer extends ItemRenderer<INavigationItem
     public constructor() {
         super();
         this.name = 'NavigationItemRenderer';
+        this.cursor = Cursor.POINTER;
         this.width = 196;
         this.height = 40;
         this.paddingX = 8;

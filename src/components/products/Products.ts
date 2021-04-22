@@ -1,33 +1,23 @@
-import { ColumnLayout, ScrollContainer } from 'enta';
-import IProductRenderer from '../../interfaces/IProductRenderer';
+import { ArrayCollection, ColumnLayout, List } from 'enta';
 import IProduct from '../../interfaces/vo/IProduct';
 import Product from '../../vo/Product';
 import ProductRenderer from './ProductRenderer';
 
-export default class Products extends ScrollContainer {
+export default class Products extends List<IProduct> {
     public constructor() {
         super();
         this.name = 'Products';
         this.paddingY = 24;
         this.layout = new ColumnLayout(224, 6, 64, 16);
-        this.addProductRenderers();
+        this.ItemRendererClass = ProductRenderer;
+        this.dataProvider = this.productItems;
     }
 
-    private addProductRenderers(): void {
-        const renderers: Array<IProductRenderer> = [];
-        for (const product of this.productItems) {
-            const renderer: IProductRenderer = new ProductRenderer();
-            renderer.product = product;
-            renderers.push(renderer);
-        }
-        this.addElements(renderers);
-    }
+    private _productItems!: ArrayCollection<IProduct>;
 
-    private _productItems!: Array<IProduct>;
-
-    private get productItems(): Array<IProduct> {
+    private get productItems(): ArrayCollection<IProduct> {
         if (!this._productItems) {
-            this._productItems = [
+            const items: Array<IProduct> = [
                 new Product('Trykfjedre', 'produkter/trykfjedre'),
                 new Product('Multibølje Trykfjedre', 'produkter/multibølje-trykfjedre'),
                 new Product('Koniske Trykfjedre', 'produkter/koniske-trykfjedre'),
@@ -57,6 +47,7 @@ export default class Products extends ScrollContainer {
                 new Product('Specialfremstillede Fjedre', 'produkter/specialfremstillede-fjedre'),
                 new Product('Sortiments Æsker', 'produkter/sortiments-æsker')
             ];
+            this._productItems = new ArrayCollection(items);
         }
         return this._productItems;
     }
