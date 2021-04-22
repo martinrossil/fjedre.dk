@@ -1,6 +1,6 @@
 {
   "name": "fjedre.dk",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "fjedre.dk redesign implementation.",
   "main": "index.js",
   "scripts": {
